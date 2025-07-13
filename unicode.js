@@ -83,18 +83,43 @@ Assign the result to a variable named swappedString.
 
 */
 
+// Practice Problem #1
+// Exercise 1:
+let twoCharString = "Hi";
+let firstCharPoint = twoCharString.charCodeAt(0);
+let secondCharPoint = twoCharString.charCodeAt(1);
+let pointSum = firstCharPoint + secondCharPoint;
+console.log("Sum of unicode code points: " + pointSum);
+
+// Exercise 2:
+let unicodePoint1 = 115;
+let unicodePoint2 = 64; 
+let newString = String.fromCharCode(unicodePoint1, unicodePoint2);
+console.log("Unicode character string: " + newString);
+
+// Exercise 3:
+let stringWithChars = "String";
+let index1 = 0;
+let index2 = stringWithChars.length - 1;
+let difference = Math.abs((stringWithChars.charCodeAt(index1) - stringWithChars.charCodeAt(index2)));
+console.log("Absolute difference in code points: " + difference);
+
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0)
+let thirdCodePoint = inputString1.charCodeAt(2);
+
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72, 101, 108, 108);
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let firstCode = inputString2.charCodeAt(0);
+let lastCode = inputString2.charCodeAt(inputString2.length - 1);
+let swappedString = String.fromCharCode(lastCode) + inputString2.slice(1, -1) + String.fromCharCode(firstCode);
+
 
 // Log all results
 console.log({
